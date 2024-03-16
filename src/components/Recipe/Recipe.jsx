@@ -2,14 +2,14 @@ import PropTypes from 'prop-types';
 import {  FaRegClock,FaFire  } from "react-icons/fa";
 import '../../../src/index.css'
 
-const Recipe = ({recipe}) => {
+const Recipe = ({recipe,handleTableData}) => {
     const {recipe_id,recipe_name,short_description,ingredients,preparing_time_minutes,calories,recipe_image}=recipe;
   return (
     <div>
-        <div>
+        <div className=''>
             {/*  */}
 
-            <div className="card w-full bg-base-100 shadow-xl lg:w-2/6 ">
+            <div className="card w-full bg-base-100 shadow-xl h-auto lg:h-[900px] ">
   <figure className="px-3 pt-3">
     <img src={recipe_image} alt={recipe_name} className="rounded-xl" />
   </figure>
@@ -36,7 +36,9 @@ const Recipe = ({recipe}) => {
         </div>
     </div>
     <div className="card-actions my-3">
-         <button className="lexend bg-emerald-500 py-4 px-9 rounded-full text-xl font-semibold text-slate-900 hover:bg-emerald-700">Want to Cook</button>
+         <button className="lexend bg-emerald-500 py-4 px-9 rounded-full text-xl font-semibold text-slate-900 hover:bg-emerald-700" onClick={()=>{
+          handleTableData(recipe)
+         }}>Want to Cook</button>
     </div>
   </div>
 </div>
