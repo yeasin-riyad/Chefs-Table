@@ -65,7 +65,7 @@ const Tables = ({tableData,handleCooking,cooking}) => {
       <tr>
         <th></th>
         <th>Name</th>
-        <th>Time</th>
+        <th>Preparation Time</th>
         <th>Calories</th>
         <th></th>
       </tr>
